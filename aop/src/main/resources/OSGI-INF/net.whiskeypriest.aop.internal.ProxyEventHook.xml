@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="net.whiskeypriest.aop.internal.ProxyEventHook" activate="activate">
+        <implementation class="net.whiskeypriest.aop.internal.ProxyEventHook"/>
+        <service servicefactory="false">
+            <provide interface="org.osgi.framework.hooks.service.EventHook"/>
+        </service>
+        <property name="service.pid" value="net.whiskeypriest.aop.internal.ProxyEventHook"/>
+        <reference name="proxy" interface="net.whiskeypriest.aop.ServiceProxy" cardinality="0..n" policy="dynamic" bind="addProxy" unbind="removeProxy"/>
+    </scr:component>
+</components>

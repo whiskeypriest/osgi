@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="net.whiskeypriest.aop.internal.ProxyFindHook" activate="activate">
+        <implementation class="net.whiskeypriest.aop.internal.ProxyFindHook"/>
+        <service servicefactory="false">
+            <provide interface="org.osgi.framework.hooks.service.FindHook"/>
+        </service>
+        <property name="service.pid" value="net.whiskeypriest.aop.internal.ProxyFindHook"/>
+    </scr:component>
+</components>
